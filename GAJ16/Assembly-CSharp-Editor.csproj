@@ -55,6 +55,7 @@
      <Compile Include="Assets\Cardboard\Editor\StereoControllerEditor.cs" />
      <None Include="Assets\Cardboard\Distortion\CardboardDistortion.cginc" />
      <None Include="Assets\Cardboard\Resources\UnlitTexture.shader" />
+     <None Include="Assets\Misc\Standard_ForceBoxProj.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Cardboard\Resources\UI\CardboardReticleShader.shader" />
      <None Include="Assets\Cardboard\Resources\SolidColor.shader" />

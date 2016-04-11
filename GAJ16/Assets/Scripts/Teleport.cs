@@ -35,13 +35,26 @@ public class Teleport : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-        if ((Cardboard.SDK.Triggered == true || Input.GetMouseButtonUp(0) == true) && (hit.collider.tag == "Mirror"))
-        {
-            dest = reflectedView(player);
-            player.transform.position = new Vector3(dest.transform.position.x, player.transform.position.y, dest.transform.position.z);
-        }
+        ray = new Ray(goTransform.position, goTransform.forward);
+        if(Physics.Raycast(ray.origin,ray.direction, out hit, 100)){
+            if ((Cardboard.SDK.Triggered == true || Input.GetMouseButtonUp(0) == true) && (hit.collider.tag == "Mirror")){
+                dest = reflectedView(player);
+                if (dest.tag == "Furniture"){
+                    //Debug.Log(dest.transform.position);
+                    //Debug.Log(dest.transform.GetChild(0).transform.position);
+                    player.transform.position = new Vector3(dest.transform.GetChild(0).transform.position.x, player.transform.position.y, dest.transform.GetChild(0).transform.position.z);
+                }
+                else if (dest.tag == "Essential"){
+                    Debug.Log("GET ITEM");
+                    Debug.Log(GameObject.FindGameObjectWithTag("UI"));
+                    Destroy(dest);
+                }
+            }
+       }
 	}
 
+
+    //HELPER
     GameObject reflectedView(GameObject go){
         //cast a new ray forward, from the current attached game object position
         ray = new Ray(goTransform.position, goTransform.forward);
