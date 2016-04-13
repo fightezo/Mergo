@@ -22,6 +22,7 @@ public class Teleport : MonoBehaviour {
     private GameObject dest;
 
     private GameObject[] essentials;
+    private Collider mirrorUpdate;
 
 	// Use this for initialization
 
@@ -39,6 +40,7 @@ public class Teleport : MonoBehaviour {
         ray = new Ray(goTransform.position, goTransform.forward);
         if(Physics.Raycast(ray.origin,ray.direction, out hit, 100)){
             if ((Cardboard.SDK.Triggered == true || Input.GetMouseButtonUp(0) == true) && (hit.collider.tag == "Mirror")){
+                mirrorUpdate = hit.collider;
                 dest = reflectedView(player);
                 if (dest.tag == "Furniture"){
                     //Debug.Log(dest.transform.position);
@@ -47,10 +49,11 @@ public class Teleport : MonoBehaviour {
                 }
                 else if (dest.tag == "Essential"){
                     Debug.Log("GET ITEM");
+                    //Appear in UI, what items you have
                     //Debug.Log(GameObject.FindGameObjectsWithTag("UI"));
-                    //list = GameObject.FindGameObjectsWithTag("Essential");
+                    //update mirror after item is taken.
+                    Debug.Log(mirrorUpdate);
 
-                    //Debug.Log(GameObject.FindGameObjectsWithTag("Essential"));
                     Destroy(dest);
                 }
                 else if (dest.tag == "Exit"){

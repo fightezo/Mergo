@@ -7,6 +7,9 @@ void OnCollisionEnter(Collision collision){
 	}
 }
 
+IF object is close enough, don't need to use mirror
+
+
 LEVEL 01- At a hotel
 steal a rich man's key/card key. 
 
