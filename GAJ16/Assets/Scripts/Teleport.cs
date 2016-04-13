@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(LineRenderer))]
 
@@ -20,11 +21,9 @@ public class Teleport : MonoBehaviour {
     public GameObject player;
     private GameObject dest;
 
+    private GameObject[] essentials;
 
 	// Use this for initialization
-	void Start () {
-       
-	}
 
     void Awake() {
         //get the attached Transform component
@@ -32,6 +31,8 @@ public class Teleport : MonoBehaviour {
         //player = this.gameObject;
         //get the attached LineRenderer component
         lineRenderer = this.GetComponent<LineRenderer>();
+
+        essentials = GameObject.FindGameObjectsWithTag("Essential");
     }
 	// Update is called once per frame
 	void Update () {
@@ -46,8 +47,22 @@ public class Teleport : MonoBehaviour {
                 }
                 else if (dest.tag == "Essential"){
                     Debug.Log("GET ITEM");
-                    Debug.Log(GameObject.FindGameObjectWithTag("UI"));
+                    //Debug.Log(GameObject.FindGameObjectsWithTag("UI"));
+                    //list = GameObject.FindGameObjectsWithTag("Essential");
+
+                    //Debug.Log(GameObject.FindGameObjectsWithTag("Essential"));
                     Destroy(dest);
+                }
+                else if (dest.tag == "Exit"){
+                    if (essentials[0] == null){
+                        Debug.Log("DONE");
+                        //SceneManager.LoadScene("");
+                    }
+                    else{
+                        Debug.Log(essentials[0]);
+                        Debug.Log("Still need to pick up " + essentials[0]);
+                    }
+                    
                 }
             }
        }
