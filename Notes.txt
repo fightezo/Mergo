@@ -18,3 +18,27 @@ break into his place, steal something
 but get caught.
 
 END....?
+
+
+
+##Story
+Scott Ridley, just your every day thief; breaking and entering stealing goods. However, Scott has a slight upper hand with his unique skills, the ability to phase through reflections.
+
+## Inspiration
+
+
+## What it does
+
+## How I built it
+
+## Challenges I ran into
+Reflections, it lead to mulitple issues due to hardware limitations (phone).
+
+## Accomplishments that I'm proud of
+
+
+## What I learned
+
+
+## What's next for GAJ16
+
