@@ -17,12 +17,13 @@ public class Teleport : MonoBehaviour {
     private int nPoints;
     public string prevReflect = null;
 
-    
     public GameObject player;
     private GameObject dest;
 
     private GameObject[] essentials;
     private Collider mirrorUpdate;
+
+    public string nextScene;
 
 	// Use this for initialization
 
@@ -37,36 +38,54 @@ public class Teleport : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-        ray = new Ray(goTransform.position, goTransform.forward);
-        if(Physics.Raycast(ray.origin,ray.direction, out hit, 100)){
-            if ((Cardboard.SDK.Triggered == true || Input.GetMouseButtonUp(0) == true) && (hit.collider.tag == "Mirror")){
+        //If clicked, triggered; SEE for teleportation.
+        if((Cardboard.SDK.Triggered == true || Input.GetMouseButtonUp(0) == true)){
+            //creating ray for seeing
+            ray = new Ray(goTransform.position, goTransform.forward);
+            Physics.Raycast(ray.origin, ray.direction, out hit, 100);
+            
+            //Looking at a mirror
+            if (hit.collider.tag == "Mirror"){
                 mirrorUpdate = hit.collider;
                 dest = reflectedView(player);
-                if (dest.tag == "Furniture"){
-                    //Debug.Log(dest.transform.position);
-                    //Debug.Log(dest.transform.GetChild(0).transform.position);
+
+                //Looking at the wall through the mirror
+                if (dest.tag == "Wall"){
+                    Debug.Log("looking at wall");
+                }
+                //Looking at a furniture through the mirror
+                else if (dest.tag == "Furniture"){
                     player.transform.position = new Vector3(dest.transform.GetChild(0).transform.position.x, player.transform.position.y, dest.transform.GetChild(0).transform.position.z);
                 }
+                //Looking at an essential item through the mirror
                 else if (dest.tag == "Essential"){
                     Debug.Log("GET ITEM");
                     //Appear in UI, what items you have
                     //Debug.Log(GameObject.FindGameObjectsWithTag("UI"));
                     //update mirror after item is taken.
                     Debug.Log(mirrorUpdate);
-
+                    Debug.Log(mirrorUpdate.GetComponent<Cubemap>());
                     Destroy(dest);
                 }
+                //Looking at the exit through the mirror
                 else if (dest.tag == "Exit"){
                     if (essentials[0] == null){
                         Debug.Log("DONE");
-                        //SceneManager.LoadScene("");
-                    }
-                    else{
+                        SceneManager.LoadScene(nextScene);
+                    }else{
                         Debug.Log(essentials[0]);
                         Debug.Log("Still need to pick up " + essentials[0]);
                     }
-                    
                 }
+            }
+            //looking at an essential item directly
+            else if (hit.collider.tag == "Essential"){
+                //if(player.collider.tag){
+
+                //}
+                Debug.Log("just looking at essential items");
+                Debug.Log(player.GetComponent<Collider>());
+                
             }
        }
 	}
@@ -180,5 +199,7 @@ public class Teleport : MonoBehaviour {
 		}
         return hit.transform.gameObject;
     }
+
+
 }
 
