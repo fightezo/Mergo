@@ -30,8 +30,6 @@ public class Teleport : MonoBehaviour {
     void Awake() {
         //get the attached Transform component
         goTransform = this.GetComponent<Transform>();
-        //player = this.gameObject;
-        //get the attached LineRenderer component
         lineRenderer = this.GetComponent<LineRenderer>();
 
         essentials = GameObject.FindGameObjectsWithTag("Essential");
