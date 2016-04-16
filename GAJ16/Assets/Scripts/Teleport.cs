@@ -43,7 +43,7 @@ public class Teleport : MonoBehaviour {
             Physics.Raycast(ray.origin, ray.direction, out hit, 100);
             
             //Looking at a mirror
-            if (hit.collider.tag == "Mirror"){
+            if (hit.collider.tag == "Reflection"){
                 mirrorUpdate = hit.collider;
                 dest = reflectedView(player);
 
@@ -78,11 +78,7 @@ public class Teleport : MonoBehaviour {
             }
             //looking at an essential item directly
             else if (hit.collider.tag == "Essential"){
-                //if(player.collider.tag){
-
-                //}
                 Debug.Log("just looking at essential items");
-                Debug.Log(player.GetComponent<Collider>());
                 
             }
        }
@@ -120,10 +116,10 @@ public class Teleport : MonoBehaviour {
                     }
 
                     //Set nReflections
-                    if (hit.collider.tag == "Mirror" && hit.transform.name != prevReflect){
+					if (hit.collider.tag == "Reflection" && hit.transform.name != prevReflect){
                         nReflections++;
                         prevReflect = hit.transform.name;
-                    } else if (hit.collider.tag == "Mirror" && hit.transform.name == prevReflect){
+					} else if (hit.collider.tag == "Reflection" && hit.transform.name == prevReflect){
                         //do nothing, automatically sets hit.collider's ray to new object
                     }else{
                         nReflections = 0;
@@ -163,10 +159,10 @@ public class Teleport : MonoBehaviour {
                         nReflections = 9;
                     }
                     //Set nReflections
-                    if (hit.collider.tag == "Mirror" && hit.transform.name != prevReflect){
+					if (hit.collider.tag == "Reflection" && hit.transform.name != prevReflect){
                         nReflections++;
                         prevReflect = hit.transform.name;
-                    } else if (hit.collider.tag == "Mirror" && hit.transform.name == prevReflect){
+					} else if (hit.collider.tag == "Reflection" && hit.transform.name == prevReflect){
                         //do nothing, automatically sets hit.collider's ray to new object
                     } else{
                         nReflections = 0;
