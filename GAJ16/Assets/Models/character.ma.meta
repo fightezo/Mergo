@@ -81,6 +81,64 @@ ModelImporter:
     100146: pCylinder2
     100148: pSphere1
     100150: pSphere2
+    100152: Character1_Ctrl_ChestEndEffector
+    100154: Character1_Ctrl_ChestOriginEffector
+    100156: Character1_Ctrl_Head
+    100158: Character1_Ctrl_HeadEffector
+    100160: Character1_Ctrl_Hips
+    100162: Character1_Ctrl_HipsEffector
+    100164: Character1_Ctrl_LeftAnkleEffector
+    100166: Character1_Ctrl_LeftArm
+    100168: Character1_Ctrl_LeftElbowEffector
+    100170: Character1_Ctrl_LeftFoot
+    100172: Character1_Ctrl_LeftFootEffector
+    100174: Character1_Ctrl_LeftForeArm
+    100176: Character1_Ctrl_LeftHand
+    100178: Character1_Ctrl_LeftHipEffector
+    100180: Character1_Ctrl_LeftKneeEffector
+    100182: Character1_Ctrl_LeftLeg
+    100184: Character1_Ctrl_LeftShoulder
+    100186: Character1_Ctrl_LeftShoulderEffector
+    100188: Character1_Ctrl_LeftToeBase
+    100190: Character1_Ctrl_LeftUpLeg
+    100192: Character1_Ctrl_LeftWristEffector
+    100194: Character1_Ctrl_Neck
+    100196: Character1_Ctrl_Reference
+    100198: Character1_Ctrl_RightAnkleEffector
+    100200: Character1_Ctrl_RightArm
+    100202: Character1_Ctrl_RightElbowEffector
+    100204: Character1_Ctrl_RightFoot
+    100206: Character1_Ctrl_RightFootEffector
+    100208: Character1_Ctrl_RightForeArm
+    100210: Character1_Ctrl_RightHand
+    100212: Character1_Ctrl_RightHipEffector
+    100214: Character1_Ctrl_RightKneeEffector
+    100216: Character1_Ctrl_RightLeg
+    100218: Character1_Ctrl_RightShoulder
+    100220: Character1_Ctrl_RightShoulderEffector
+    100222: Character1_Ctrl_RightToeBase
+    100224: Character1_Ctrl_RightUpLeg
+    100226: Character1_Ctrl_RightWristEffector
+    100228: Character1_Ctrl_Spine
+    100230: Character1_Reference1
+    100232: left
+    100234: pCube1
+    100236: pSphere3
+    100238: pSphere4
+    100240: pSphere5
+    100242: pCube10
+    100244: pCube11
+    100246: pCube12
+    100248: pCube13
+    100250: pCube14
+    100252: pCube2
+    100254: pCube3
+    100256: pCube4
+    100258: pCube5
+    100260: pCube6
+    100262: pCube7
+    100264: pCube8
+    100266: pCube9
     400000: //RootNode
     400002: Character1_Head
     400004: Character1_Hips
@@ -157,18 +215,127 @@ ModelImporter:
     400146: pCylinder2
     400148: pSphere1
     400150: pSphere2
+    400152: Character1_Ctrl_ChestEndEffector
+    400154: Character1_Ctrl_ChestOriginEffector
+    400156: Character1_Ctrl_Head
+    400158: Character1_Ctrl_HeadEffector
+    400160: Character1_Ctrl_Hips
+    400162: Character1_Ctrl_HipsEffector
+    400164: Character1_Ctrl_LeftAnkleEffector
+    400166: Character1_Ctrl_LeftArm
+    400168: Character1_Ctrl_LeftElbowEffector
+    400170: Character1_Ctrl_LeftFoot
+    400172: Character1_Ctrl_LeftFootEffector
+    400174: Character1_Ctrl_LeftForeArm
+    400176: Character1_Ctrl_LeftHand
+    400178: Character1_Ctrl_LeftHipEffector
+    400180: Character1_Ctrl_LeftKneeEffector
+    400182: Character1_Ctrl_LeftLeg
+    400184: Character1_Ctrl_LeftShoulder
+    400186: Character1_Ctrl_LeftShoulderEffector
+    400188: Character1_Ctrl_LeftToeBase
+    400190: Character1_Ctrl_LeftUpLeg
+    400192: Character1_Ctrl_LeftWristEffector
+    400194: Character1_Ctrl_Neck
+    400196: Character1_Ctrl_Reference
+    400198: Character1_Ctrl_RightAnkleEffector
+    400200: Character1_Ctrl_RightArm
+    400202: Character1_Ctrl_RightElbowEffector
+    400204: Character1_Ctrl_RightFoot
+    400206: Character1_Ctrl_RightFootEffector
+    400208: Character1_Ctrl_RightForeArm
+    400210: Character1_Ctrl_RightHand
+    400212: Character1_Ctrl_RightHipEffector
+    400214: Character1_Ctrl_RightKneeEffector
+    400216: Character1_Ctrl_RightLeg
+    400218: Character1_Ctrl_RightShoulder
+    400220: Character1_Ctrl_RightShoulderEffector
+    400222: Character1_Ctrl_RightToeBase
+    400224: Character1_Ctrl_RightUpLeg
+    400226: Character1_Ctrl_RightWristEffector
+    400228: Character1_Ctrl_Spine
+    400230: Character1_Reference1
+    400232: left
+    400234: pCube1
+    400236: pSphere3
+    400238: pSphere4
+    400240: pSphere5
+    400242: pCube10
+    400244: pCube11
+    400246: pCube12
+    400248: pCube13
+    400250: pCube14
+    400252: pCube2
+    400254: pCube3
+    400256: pCube4
+    400258: pCube5
+    400260: pCube6
+    400262: pCube7
+    400264: pCube8
+    400266: pCube9
     2300000: pCylinder1
     2300002: pCylinder2
     2300004: pSphere1
     2300006: pSphere2
+    2300008: pCube1
+    2300010: pSphere3
+    2300012: pSphere4
+    2300014: pSphere5
+    2300016: pCube10
+    2300018: pCube11
+    2300020: pCube12
+    2300022: pCube13
+    2300024: pCube14
+    2300026: pCube2
+    2300028: pCube3
+    2300030: pCube4
+    2300032: pCube5
+    2300034: pCube6
+    2300036: pCube7
+    2300038: pCube8
+    2300040: pCube9
     3300000: pCylinder1
     3300002: pCylinder2
     3300004: pSphere1
     3300006: pSphere2
+    3300008: pCube1
+    3300010: pSphere3
+    3300012: pSphere4
+    3300014: pSphere5
+    3300016: pCube10
+    3300018: pCube11
+    3300020: pCube12
+    3300022: pCube13
+    3300024: pCube14
+    3300026: pCube2
+    3300028: pCube3
+    3300030: pCube4
+    3300032: pCube5
+    3300034: pCube6
+    3300036: pCube7
+    3300038: pCube8
+    3300040: pCube9
     4300000: pCylinder1
     4300002: pSphere1
     4300004: pCylinder2
     4300006: pSphere2
+    4300008: pCube1
+    4300010: pSphere4
+    4300012: pSphere5
+    4300014: pSphere3
+    4300016: pCube2
+    4300018: pCube3
+    4300020: pCube4
+    4300022: pCube5
+    4300024: pCube6
+    4300026: pCube7
+    4300028: pCube8
+    4300030: pCube9
+    4300032: pCube10
+    4300034: pCube11
+    4300036: pCube12
+    4300038: pCube13
+    4300040: pCube14
     9500000: //RootNode
   materials:
     importMaterials: 1
