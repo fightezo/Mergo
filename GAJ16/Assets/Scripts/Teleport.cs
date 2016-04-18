@@ -54,6 +54,7 @@ public class Teleport : MonoBehaviour {
                 //Looking at a furniture through the mirror
                 else if (dest.tag == "Furniture"){
                     player.transform.position = new Vector3(dest.transform.GetChild(0).transform.position.x, player.transform.position.y, dest.transform.GetChild(0).transform.position.z);
+					Debug.Log(dest);
                 }
                 //Looking at an essential item through the mirror
                 else if (dest.tag == "Essential"){
