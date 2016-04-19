@@ -46,4 +46,6 @@ Reflections, it lead to mulitple issues due to hardware limitations (phone).
 !!!MAKE SURE TO DISABLE EXTRA raycasters
 
 DIALOGUE:
+
+Rick Howl
 Scott Ridley
