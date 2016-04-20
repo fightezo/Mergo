@@ -1,4 +1,8 @@
+=======================================================
+======================CODING NOTES======================
+=======================================================
 TO COMPLETE LEVEL, CHECK IF THERE'S ANYMORE GameObject with Tags of "Essential"
+---done
 
 psuedocode:
 void OnCollisionEnter(Collision collision){
@@ -6,46 +10,80 @@ void OnCollisionEnter(Collision collision){
 
 	}
 }
+---done
 
-IF object is close enough, don't need to use mirror //NAH
+IF object is close enough, don't need to use mirror
+--NAH, scraped idea
 
-LEVEL 00- Tutorial, menu screen.
-LEVEL 01- At a hotel
-steal a rich man's key/card key. 
 
-LEVEL 02
+!!!MAKE SURE TO DISABLE EXTRA raycasters
+
+=======================================================
+======================GAMEPLAY NOTES======================
+=======================================================
+LEVEL 00- Home
+		-Tutorial/Menu screen?
+		-pick up items to go out
+LEVEL 01- Hotel Lobby
+		steal a man's key/card key. 
+LEVEL 02- Hotel Room
 break into his place, steal something
 but get caught.
-
 END....?
 
 
 
 ##Story
-Scott Ridley, just your every day thief; breaking and entering stealing goods. However, Scott has a slight upper hand with his unique skills, the ability to phase through reflections.
+Rick Howl, a modern day Robin Hood; stealing from the rich and giving to the poor. Except.. He doesnt' give to the poor. Rick uses his set of unique skills to do his daily job with the help of his partner in crime, Scott Ridley, his partner in crime.
 
 ## Inspiration
-
+http://i.imgur.com/CGo8YDF.gifv
 
 ## What it does
+Tells the story of Rick Howl.
 
 ## How I built it
+Through the use of Unity 5, 3ds Maya 2016 and Photoshop 
 
 ## Challenges I ran into
 Reflections, it lead to mulitple issues due to hardware limitations (phone).
+Optimizing the game for mobile devices
 
 ## Accomplishments that I'm proud of
-
+A complete game with 3D models, sounds and gameplay.
 
 ## What I learned
-
+Animation and Rigging in Maya.
 
 ## What's next for GAJ16
+Depending on the reviews of the game, might further develop Mergo's story.
 
-
-!!!MAKE SURE TO DISABLE EXTRA raycasters
-
+=======================================================
+======================STORY NOTES======================
+=======================================================
 DIALOGUE:
+Rick Howl- The hang up artist, the thief.
+Scott Ridley- Rick's partner in crime, the recon man.
 
-Rick Howl
-Scott Ridley
+LEVEL00
+*alarm sounds*
+*hits snooze*
+  "5 more minutes"
+*Phone rings*
+*Yawns*
+  "Aw man who is it, where's my phone?"
+--wakes up
+--looks around, sees phone.
+"Oh there is it... Ah... Might as well practice mergo"
+"Phu.... Alright. Let's look at the reflection of the phone and pick it up."
+--picks up phone
+"Alright, let's see who it is... oh."
+"Hey Scotty, what's up?"
+"Yo Rick! Where are you? Did you forget about today?"
+
+LEVEL01
+
+
+LEVEL02
+
+=======================================================
