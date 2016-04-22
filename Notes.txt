@@ -61,11 +61,17 @@ Depending on the reviews of the game, might further develop Mergo's story.
 =======================================================
 ======================STORY NOTES======================
 =======================================================
-DIALOGUE:
+Characters: 
 Rick Howl- The hang up artist, the thief.
 Scott Ridley- Rick's partner in crime, the recon man.
+*actions
+#screen hint
+"dialogue
+--players action
 
-LEVEL00
+
+Script
+Level 00
 *alarm sounds*
 *hits snooze*
   "5 more minutes"
@@ -74,16 +80,56 @@ LEVEL00
   "Aw man who is it, where's my phone?"
 --wakes up
 --looks around, sees phone.
-"Oh there is it... Ah... Might as well practice mergo"
-"Phu.... Alright. Let's look at the reflection of the phone and pick it up."
+"Oh there is it... Ah... Whoever it is can wait, I might as well practice mergo"
+"Phu.... Alright. Look at the reflection of the phone and pick it up."
+#look at reflection and use the magnet trigger to pick it up#
 --picks up phone
 "Alright, let's see who it is... oh."
+*answers phone*
 "Hey Scotty, what's up?"
-"Yo Rick! Where are you? Did you forget about today?"
+"Yo Rick! Just calling to make sure you're still up for it, we can still get out of this is you want."
+"We've spent too much effort to bail now, let's do it. I'll meet you at the hotel lobby, yeh?"
+"Alright Rick, I'll see you there"
+*phone hangs up*
+"Alright, I'll just practice a bit more with my keys and hat.
+#look around and find the remaining items#
+#move by looking at a furniture and pushing the trigger#
+--picks up hat
+" alright, just my keys/hat now "
+-- picks up keys
+"Done, I'll just teleport to the door for one last practice"
+--Teleport to door
+"I'm ready to go."
 
-LEVEL01
+Level 01
+*black screen
+"I see you Rick, find a seat and I'll fill you in"
+*screen appears
+"alright, you see the fat man? he's our guy. Apparently he's got a case filled with blood diamonds. So work your magic, get that card, and get to his room."
+"Oh. Try not to be seen. Teleport only to the second floor if you absolutely have to, we don't want to attract unwanted attention."
+--picks up keycard
+"Got it"
+"Awesome, now head over to the elevators. He's staying in room 1205"
+
+*Fails, 
+
+Level 02
+"I'm in"
+"Alright, look around for a briefcase, but try to not disturb his place as much as possible. We're making a clean getaway."
+#triggers on briefcase
+"Scotty, I think I found it"
+"ALright, the code is 320"
+@Mini game?@
+#triggers on briefcase
+*door slams open*
+--waits for player to look at door
+*sees 3 men with guns
+"Oh sh--"/" Scotty, we've got a problem"
+*gunshot*
+End
+Thank you for playing Mergo
+Play again?
 
 
-LEVEL02
 
 =======================================================
