@@ -109,7 +109,7 @@ Level 01
 "Oh. Try not to be seen. Teleport only to the second floor if you absolutely have to, we don't want to attract unwanted attention."
 --picks up keycard
 "Got it"
-"Awesome, now head over to the elevators. He's staying in room 1205"
+"Awesome, now head over to the elevators. He's staying in room 0320"
 
 *Fails, 
 

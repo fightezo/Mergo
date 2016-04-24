@@ -69,6 +69,10 @@
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\CardboardAndroidDevice.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\CardboardiOSDevice.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\UnityEditorDevice.cs" />
+     <Compile Include="Assets\Scripts\DialogueLevel00.cs" />
+     <Compile Include="Assets\Scripts\DialogueLevel01.cs" />
+     <Compile Include="Assets\Scripts\DialogueLevel02.cs" />
+     <Compile Include="Assets\Scripts\NextScene.cs" />
      <Compile Include="Assets\Scripts\RaycastReflection.cs" />
      <Compile Include="Assets\Scripts\ReflectionTest.cs" />
      <Compile Include="Assets\Scripts\Teleport.cs" />

@@ -36,6 +36,7 @@ public class Teleport : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
+		
         //If clicked, triggered; SEE for teleportation.
         if((Cardboard.SDK.Triggered == true || Input.GetMouseButtonUp(0) == true)){
             //creating ray for seeing
@@ -53,6 +54,7 @@ public class Teleport : MonoBehaviour {
                 }
                 //Looking at a furniture through the mirror
                 else if (dest.tag == "Furniture"){
+					player.transform.rotation = Quaternion.Euler(0,Input.mousePosition.y,0);
                     player.transform.position = new Vector3(dest.transform.GetChild(0).transform.position.x, dest.transform.GetChild(0).transform.position.y, dest.transform.GetChild(0).transform.position.z);
 					Debug.Log(dest);
                 }
@@ -64,18 +66,20 @@ public class Teleport : MonoBehaviour {
                     //update mirror after item is taken.
                     Debug.Log(mirrorUpdate);
                     Debug.Log(mirrorUpdate.GetComponent<Cubemap>());
-                    Destroy(dest);
+					dest.SetActive(false);
                 }
                 //Looking at the exit through the mirror
                 else if (dest.tag == "Exit"){
-                    if (essentials[0] == null){
+					if (essentials[0].activeSelf == false && essentials[1].activeSelf == false){
                         Debug.Log("DONE");
                         SceneManager.LoadScene(nextScene);
                     }else{
-                        Debug.Log(essentials[0]);
                         Debug.Log("Still need to pick up " + essentials[0]);
                     }
-                }
+				} else if (dest.tag == "Briefcase"){
+					//activate cutscene;
+					dest.GetComponent<BoxCollider>().isTrigger = true;
+				}
             }
             //looking at an essential item directly
             else if (hit.collider.tag == "Essential"){
