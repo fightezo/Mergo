@@ -17,6 +17,7 @@ IF object is close enough, don't need to use mirror
 
 
 !!!MAKE SURE TO DISABLE EXTRA raycasters
+--done
 
 =======================================================
 ======================GAMEPLAY NOTES======================
@@ -47,7 +48,7 @@ Through the use of Unity 5, 3ds Maya 2016 and Photoshop
 
 ## Challenges I ran into
 Reflections, it lead to mulitple issues due to hardware limitations (phone).
-Optimizing the game for mobile devices
+Optimizing the game for mobile devices.
 
 ## Accomplishments that I'm proud of
 A complete game with 3D models, sounds and gameplay.
@@ -133,3 +134,16 @@ Play again?
 
 
 =======================================================
+
+OTHER CHALLENGES
+
+-trying to get voices or attempting to get voices for the game
+	resorted to using text instead.
+
+
+
+
+Next Update
+- fix bugs
+	-you can choose briefcase multiple times which will initiate multiple instances
+	-better game level designs
