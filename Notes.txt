@@ -134,8 +134,8 @@ Play again?
 
 
 =======================================================
-
-OTHER CHALLENGES
+==================OTHER CHALLENGES=====================
+=======================================================
 
 -trying to get voices or attempting to get voices for the game
 	resorted to using text instead.
@@ -146,8 +146,9 @@ OTHER CHALLENGES
 	-use yield break to stop old text if interupted
 	-fix timing of cutscenes
 	-play music in dialogue/script
+	-fix returning to old seat doesn't break the game
 immersive body
-	-rotate body
+	-rotate body as you turn
 
 
 Next Update (1.4)
