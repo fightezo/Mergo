@@ -36,7 +36,7 @@ public class DialogueLevel00 : MonoBehaviour {
 	}
 	IEnumerator Script1(){
 		instructions.color = Color.red;
-		instructions.text = "I see you Rick, find a seat and I'll fill you in";
+		instructions.text = "Aw man who is it, where's my phone?";
 		yield return new WaitForSeconds(5);
 		instructions.text = "Oh there is it... ";
 		yield return new WaitForSeconds(5);

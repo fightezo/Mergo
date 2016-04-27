@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(LineRenderer))]
 
 public class Teleport : MonoBehaviour {
-    private Transform goTransform;
+	public string prevScene; 
+	private Transform goTransform;
     private LineRenderer lineRenderer;
 
     private Ray ray;
@@ -24,6 +26,7 @@ public class Teleport : MonoBehaviour {
     private Collider mirrorUpdate;
 
     public string nextScene;
+	private Text instructions;
 
 	// Use this for initialization
 
@@ -57,6 +60,10 @@ public class Teleport : MonoBehaviour {
 					player.transform.rotation = Quaternion.Euler(0,Input.mousePosition.y,0);
                     player.transform.position = new Vector3(dest.transform.GetChild(0).transform.position.x, dest.transform.GetChild(0).transform.position.y, dest.transform.GetChild(0).transform.position.z);
 					Debug.Log(dest);
+					if(dest.layer == 9){//losing layer
+						SceneManager.LoadScene("lose");
+					}
+
                 }
                 //Looking at an essential item through the mirror
                 else if (dest.tag == "Essential"){
@@ -86,6 +93,17 @@ public class Teleport : MonoBehaviour {
                 Debug.Log("just looking at essential items");
                 
             }
+			else if(hit.collider.tag == "Finish"){
+				Application.Quit();
+			}
+			else if(hit.collider.tag == "Respawn"){
+				Debug.Log("here");
+				SceneManager.LoadScene(nextScene);
+			}
+			else if(hit.collider.tag == "Retry"){
+				Debug.Log("here");
+				SceneManager.LoadScene(prevScene);
+			}
        }
 	}
 
@@ -198,7 +216,5 @@ public class Teleport : MonoBehaviour {
 		}
         return hit.transform.gameObject;
     }
-
-
 }
 

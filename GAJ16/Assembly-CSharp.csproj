@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\DialogueLevel00.cs" />
      <Compile Include="Assets\Scripts\DialogueLevel01.cs" />
      <Compile Include="Assets\Scripts\DialogueLevel02.cs" />
+     <Compile Include="Assets\Scripts\LookAt.cs" />
      <Compile Include="Assets\Scripts\NextScene.cs" />
      <Compile Include="Assets\Scripts\RaycastReflection.cs" />
      <Compile Include="Assets\Scripts\ReflectionTest.cs" />

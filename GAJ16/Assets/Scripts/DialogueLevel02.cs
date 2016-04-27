@@ -62,9 +62,9 @@ public class DialogueLevel02 : MonoBehaviour {
 
 		instructions.text = "Scotty, we've got a problem";
 
-		yield return new WaitForSeconds(8);
+		yield return new WaitForSeconds(3);
 		gunshot.GetComponent<AudioSource>().Play();
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(1);
 		SceneManager.LoadScene("end");
 	}
 }

@@ -5,16 +5,14 @@ using UnityEngine.SceneManagement;
 public class NextScene : MonoBehaviour {
 	public string nextLevel;
 
-	private Transform goTransform;
-	private LineRenderer lineRenderer;
+	public Transform goTransform;
 
 	private Ray ray;
 	private RaycastHit hit;
 
 	// Use this for initialization
 	void Start () {
-		goTransform = this.GetComponent<Transform>();
-		lineRenderer = this.GetComponent<LineRenderer>();
+		//goTransform = this.GetComponent<Transform>();
 	}
 	
 	// Update is called once per frame
@@ -25,7 +23,8 @@ public class NextScene : MonoBehaviour {
 
 			if(hit.collider.tag == "Finish"){
 				Application.Quit();
-			} else{
+			} else if(hit.collider.tag == "Respawn"){
+				Debug.Log("here");
 				SceneManager.LoadScene(nextLevel);
 			}
 		}
