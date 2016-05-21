@@ -5,7 +5,10 @@ using System.Collections;
 public class DialogueLevel00 : MonoBehaviour {
 	// Use this for initialization
 	public GameObject UI;
+	public GameObject obj;
+	private Text objvts;
 	private Text instructions;
+
 	public GameObject leftEye;
 	public GameObject rightEye;
 	public GameObject main;
@@ -15,6 +18,7 @@ public class DialogueLevel00 : MonoBehaviour {
 	void Start () {
 		//UI.transform.position = Input.mousePosition;
 		instructions = UI.GetComponent<Text>();
+		objvts = UI.GetComponent<Text>();
 
 		essentials = GameObject.FindGameObjectsWithTag("Essential");
 		StartCoroutine(Script1());

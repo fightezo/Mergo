@@ -140,6 +140,11 @@ Play again?
 -trying to get voices or attempting to get voices for the game
 	resorted to using text instead.
 
+- immediate fixes:
+	- robust enough so that the user knows what he's doing
+		-add objective sign
+		-disable script for teleporting when Scotty is talking, or when cutscene is happening
+	- 
 
 - fix bugs
 	-you can choose briefcase multiple times which will initiate multiple instances
